@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/foreground"
+    tools:context=".RunningActivity">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/layout_shape_12"
+        android:backgroundTint="@color/background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/cancelActivity">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close_alt" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/layout_card"
+        map:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.491"
+        map:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/layout_status_gps"
+            android:backgroundTint="@color/destructive"
+            android:gravity="center"
+            android:orientation="horizontal"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_network" />
+
+            <TextView
+                android:id="@+id/statusGPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResult01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="26dp"
+            android:text="00:00"
+            android:textColor="@color/foreground"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/tvLabel01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Time"
+            android:textColor="@color/muted_foreground"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/tvResult01" />
+
+        <TextView
+            android:id="@+id/tvResult02"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="14dp"
+            android:text="--:--"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            map:layout_constraintStart_toEndOf="@+id/tvResult01"
+            map:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/tvLabel02"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="11dp"
+            android:text="Kilometers"
+            android:gravity="center"
+            android:textColor="@color/muted_foreground"
+            map:layout_constraintStart_toEndOf="@+id/tvLabel01"
+            map:layout_constraintTop_toBottomOf="@+id/tvResult02" />
+
+        <TextView
+            android:id="@+id/tvResult03"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="24dp"
+            android:text="100.00"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            map:layout_constraintStart_toEndOf="@+id/tvResult02"
+            map:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <TextView
+            android:id="@+id/txLabel03"
+            android:layout_width="70dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:text="Kilometers"
+            android:textColor="@color/muted_foreground"
+            map:layout_constraintStart_toEndOf="@+id/tvLabel02"
+            map:layout_constraintTop_toBottomOf="@+id/tvResult03" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="52dp"
+            android:text="Mode"
+            android:textColor="@color/muted_foreground"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/modeActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/layout_circle"
+            android:backgroundTint="@color/primary"
+            android:orientation="horizontal"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/textView17"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_running" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:text="Running"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/modeActivity"
+            android:textColor="@color/muted_foreground"/>
+
+        <LinearLayout
+            android:id="@+id/toggleActivity"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/layout_circle"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            map:layout_constraintStart_toEndOf="@+id/modeActivity"
+            map:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_play" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="8dp"
+            android:text="Stop"
+            android:textColor="@color/muted_foreground"
+            map:layout_constraintStart_toEndOf="@+id/toggleActivity"
+            map:layout_constraintTop_toBottomOf="@+id/stopActivity" />
+
+        <LinearLayout
+            android:id="@+id/stopActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/layout_circle"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            map:layout_constraintStart_toEndOf="@+id/toggleActivity"
+            map:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_stop" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

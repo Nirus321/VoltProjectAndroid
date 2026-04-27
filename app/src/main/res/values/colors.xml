@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0B1930</color>
+    <color name="foreground">#FFFFFF</color>
+
+    <color name="primary">#E67006</color>
+    <color name="primary_foreground">#FFFFFF</color>
+
+    <color name="muted">#040F20</color>
+    <color name="muted_foreground">#A7ADC7</color>
+
+    <color name="card">#040F20</color>
+    <color name="card_foreground">#FFFFFF</color>
+
+    <color name="destructive">#C72A2A</color>
+    <color name="destructive_foreground">#FFFFFF</color>
+
+    <color name="border">#1D2736</color>
+    <color name="success">#1A6308</color>
+</resources>

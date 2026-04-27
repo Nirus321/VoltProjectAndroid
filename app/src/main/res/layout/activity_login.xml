@@ -1,0 +1,201 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- FrameLayout para sobrepor o ProgressBar -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="28sp"
+        android:gravity="center_horizontal|start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <!-- LOGO -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_logo" />
+
+        <!-- TÍTULO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:text="Welcome to "
+                android:textColor="@color/foreground"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Volt"
+                android:textColor="@color/primary"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SUBTÍTULO -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:text="Your journey to a healthier you starts now"
+            android:textColor="@color/muted_foreground"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp" />
+
+        <!-- EMAIL -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilEmail"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_mail"
+            app:startIconTint="@color/primary"
+            app:boxStrokeColor="@color/input_stroke_color"
+            app:boxBackgroundColor="@color/muted"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="3dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxBackgroundMode="outline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:layout_marginTop="@dimen/space_6"
+            android:maxWidth="315dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:includeFontPadding="false"
+                android:textColor="@color/foreground"
+                android:textColorHint="@color/muted_foreground"
+                android:paddingStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- PASSWORD -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilPassword"
+            app:hintEnabled="false"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/primary"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/primary"
+            app:boxStrokeColor="@color/input_stroke_color"
+            app:boxBackgroundColor="@color/muted"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="3dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxBackgroundMode="outline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:layout_marginTop="@dimen/space_4"
+            android:maxWidth="315dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:includeFontPadding="false"
+                android:textColor="@color/foreground"
+                android:textColorHint="@color/muted_foreground"
+                android:paddingStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- BOTÃO LOGIN -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:text="Login"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/primary_foreground"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:maxWidth="315dp"
+            app:cornerRadius="10dp"
+            app:elevation="0dp" />
+
+        <!-- ESQUECI A SENHA -->
+        <TextView
+            android:id="@+id/tvForgot"
+            android:text="Forgot Password?"
+            android:textColor="@color/muted_foreground"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/space_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp" />
+
+        <!-- REGISTRO -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp">
+
+            <TextView
+                android:text="Don't have an account? "
+                android:textColor="@color/muted_foreground"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:text="Register"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+        <!-- ProgressBar circular no centro -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="@color/primary" />
+
+    </FrameLayout>
+</ScrollView>

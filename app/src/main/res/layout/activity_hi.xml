@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <!-- Imagem principal ocupa o ecrã inteiro -->
+    <ImageView
+        android:id="@+id/hero"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hi_background" />
+
+    <!-- Texto -->
+
+    <ImageView
+        android:id="@+id/bgLines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-198dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_welcome_lines" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:text="Welcome to\nVolt"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textColor="@color/foreground"
+        android:gravity="start"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Ícone da seta simples -->
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="42dp"
+        android:contentDescription="Next"
+        android:src="@drawable/ic_arrow_simple" />
+</RelativeLayout>

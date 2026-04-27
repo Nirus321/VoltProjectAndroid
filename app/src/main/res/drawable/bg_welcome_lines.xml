@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1500dp"
+    android:height="1800dp"
+    android:viewportWidth="1500"
+    android:viewportHeight="1800">
+
+    <!-- Faixa superior -->
+    <path
+        android:pathData="M0,0 L1500,400 L1500,800 L0,400 Z"
+        android:fillColor="#EE4C1B" />
+
+    <!-- Faixa do meio (alinhada suavemente com a de cima e de baixo) -->
+    <path
+        android:pathData="M0,400 L1500,800 L1500,1200 L0,800 Z"
+        android:fillColor="#EE651B" />
+
+    <!-- Faixa inferior -->
+    <path
+        android:pathData="M0,800 L1500,1200 L1500,1600 L0,1200 Z"
+        android:fillColor="#EE8B1B" />
+</vector>

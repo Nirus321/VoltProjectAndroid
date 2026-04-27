@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="48dp"
+        android:gravity="center_horizontal">
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Profile &amp; Settings"
+            android:textColor="@color/foreground"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- SECTION 1: PERSONAL INFO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/section_container"
+            android:layout_marginTop="32dp"
+            android:gravity="start|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Personal Info"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxBackgroundColor="@color/muted"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:maxWidth="315dp"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:hint="Full Name"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxBackgroundColor="@color/muted"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:maxWidth="315dp"
+                android:layout_marginTop="12dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAge"
+                    android:hint="Birth Date"
+                    android:inputType="date"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:text="Sex"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spSex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="36dp"
+                android:maxWidth="315dp"
+                android:layout_marginTop="6dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="315dp"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:hintEnabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_and_button_height"
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:boxBackgroundColor="@color/muted"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etWeight"
+                        android:hint="Weight"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/foreground"
+                        android:textColorHint="@color/muted_foreground"
+                        android:paddingStart="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <Spinner
+                    android:id="@+id/spWeightUnit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/input_and_button_height"
+                    android:background="@drawable/spinner_background"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="36dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="315dp"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:hintEnabled="false"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_and_button_height"
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/input_stroke_color"
+                    app:boxBackgroundColor="@color/muted"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="3dp"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHeight"
+                        android:hint="Height"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/foreground"
+                        android:textColorHint="@color/muted_foreground"
+                        android:paddingStart="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent" />
+
+                <Spinner
+                    android:id="@+id/spHeightUnit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/input_and_button_height"
+                    android:background="@drawable/spinner_background"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="36dp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveInfo"
+                android:text="Save Credentials"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/primary_foreground"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:maxWidth="315dp"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+        <!-- SECTION 2: PASSWORD RECOVERY -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/section_container"
+            android:layout_marginTop="40dp"
+            android:gravity="start|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Edit Credentials"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintEnabled="false"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxBackgroundColor="@color/muted"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:maxWidth="315dp"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintEnabled="false"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/primary"
+                app:boxBackgroundColor="@color/muted"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:maxWidth="315dp"
+                android:layout_height="@dimen/input_and_button_height"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCurrentPass"
+                    android:hint="Current Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:hintEnabled="false"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/primary"
+                app:boxBackgroundColor="@color/muted"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:maxWidth="315dp"
+                android:layout_height="@dimen/input_and_button_height"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNewPass"
+                    android:hint="New Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveNewPassword"
+                android:text="Save New Password"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/primary_foreground"
+                android:layout_marginTop="24dp"
+                android:maxWidth="315dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:text="Forgot Password?"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="315dp"
+                android:paddingBottom="32dp"/>
+
+
+        </LinearLayout>
+
+        <!-- DATA SYNC SECTION -->
+        <LinearLayout
+            android:id="@+id/sectionDataSync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/section_container"
+            android:padding="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Data Sync"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- ICON DB -->
+                <ImageView
+                    android:id="@+id/ivLocalDb"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_db"
+                    />
+
+                <!-- TEXT -->
+                <TextView
+                    android:layout_marginStart="12dp"
+                    android:text="Local SQLite Database"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <!-- STATUS -->
+                <TextView
+                    android:id="@+id/tvSyncStatus"
+                    android:text="Synced"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- SYNC ICON -->
+                <ImageView
+                    android:id="@+id/ivSyncNow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_sync"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- ICON DB -->
+                <ImageView
+                    android:id="@+id/ivDelAccount"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_delete_forever"
+                    />
+
+                <!-- TEXT -->
+                <TextView
+                    android:layout_marginStart="12dp"
+                    android:text="Delete Account \nForever"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delForeverBtn"
+                    android:text="Delete"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/primary_foreground"
+
+                    android:maxWidth="315dp"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/input_and_button_height"
+                    app:cornerRadius="12dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

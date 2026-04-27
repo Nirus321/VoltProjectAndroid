@@ -1,0 +1,245 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal|start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TÍTULO -->
+        <TextView
+            android:text="Let's Set More Details"
+            android:textColor="@color/foreground"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content" />
+
+        <!-- FULL NAME -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilFullName"
+            android:hint="@string/hint_full_name"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/input_stroke_color"
+            app:boxBackgroundColor="@color/muted"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="3dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxBackgroundMode="outline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:layout_marginTop="@dimen/space_6"
+            android:maxWidth="315dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:hint="@string/hint_full_name"
+                android:inputType="textPersonName"
+                android:includeFontPadding="false"
+                android:textColor="@color/foreground"
+                android:textColorHint="@color/muted_foreground"
+                android:paddingStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- AGE -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/tilAge"
+            android:layout_marginTop="@dimen/space_4"
+            android:hint="@string/hint_birth_date"
+            app:hintEnabled="false"
+            app:boxStrokeColor="@color/input_stroke_color"
+            app:boxBackgroundColor="@color/muted"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="3dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxBackgroundMode="outline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:maxWidth="315dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:hint="@string/hint_birth_date"
+                android:inputType="date"
+                android:includeFontPadding="false"
+                android:textColor="@color/foreground"
+                android:textColorHint="@color/muted_foreground"
+                android:paddingStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- SEX -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp">
+
+            <TextView
+                android:text="@string/hint_sex"
+                android:textColor="@color/foreground"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spSex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_and_button_height"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="36dp"
+                android:gravity="center_vertical|start"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@color/muted"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <!-- WEIGHT -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/tilWeight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:hintEnabled="false"
+                android:hint="@string/hint_weight"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxBackgroundColor="@color/muted"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxBackgroundMode="outline"
+                android:layout_height="@dimen/input_and_button_height">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWeight"
+                    android:hint="@string/hint_weight"
+                    android:inputType="numberDecimal"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <Spinner
+                android:id="@+id/spWeightUnit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/input_and_button_height"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="36dp"
+                android:gravity="center_vertical|start"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@color/muted"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <!-- HEIGHT -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="315dp"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/tilHeight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:hintEnabled="false"
+                android:hint="@string/hint_height"
+                app:boxStrokeColor="@color/input_stroke_color"
+                app:boxBackgroundColor="@color/muted"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeWidthFocused="3dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxBackgroundMode="outline"
+                android:layout_height="@dimen/input_and_button_height">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHeight"
+                    android:hint="@string/hint_height"
+                    android:inputType="numberDecimal"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/foreground"
+                    android:textColorHint="@color/muted_foreground"
+                    android:paddingStart="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <Spinner
+                android:id="@+id/spHeightUnit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/input_and_button_height"
+                android:background="@drawable/spinner_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="36dp"
+                android:gravity="center_vertical|start"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@color/muted"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <!-- BOTÃO -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGo"
+            android:text="Good to Go"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/primary_foreground"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_and_button_height"
+            android:maxWidth="315dp"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+</ScrollView>

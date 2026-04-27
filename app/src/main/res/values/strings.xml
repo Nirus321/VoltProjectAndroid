@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Volt Project</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_start_exercise">Start Exercise</string>
+    <string name="menu_history">History</string>
+    <string name="menu_profile_and_settings">Profile &amp; Settings</string>
+    <string name="menu_sign_out">Sign out</string>
+
+    <string name="welcome_user_title">Hello, John Doe!</string>
+    <string name="welcome_user_subtitle">Let\'s make today a step towards your best!</string>
+
+    <string name="motivation_message">Let\'s make today a step towards your best!</string>
+    <string name="last_activity">Last Activity</string>
+    <string name="activity_time">-- : --</string>
+    <string name="distance_value">0 km</string>
+    <string name="distance">Distance</string>
+    <string name="duration_value">-- : --</string>
+    <string name="duration">Duration</string>
+    <string name="calories_value">0 kcal</string>
+    <string name="calories">Calories</string>
+    <string name="weekly_progress">Weekly Progress</string>
+    <string name="steps_value">50 349</string>
+    <string name="steps">Steps</string>
+    <string name="kilometers_value">40 km</string>
+    <string name="kilometers">Kilometers</string>
+    <string name="onu_recommendation">ONU Recommendation (Weekly)</string>
+    <string name="steps_goal">59 500 Steps</string>
+    <string name="time_goal">2h 30min</string>
+
+    <string name="sign_out_message">Signing out</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_birth_date">Birth Date</string>
+    <string name="hint_sex">Sex</string>
+    <string name="hint_weight">Weight</string>
+    <string name="hint_height">Height</string>
+</resources>
