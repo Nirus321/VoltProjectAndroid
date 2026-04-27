@@ -5,6 +5,7 @@
 A **Volt** é uma aplicação móvel minimalista para monitorizar e registar atividades físicas (corrida, caminhada e ciclismo). Permite acompanhar métricas como passos, distância, tempo, ritmo e calorias, focando-se numa experiência simples e apelativa.
 
 ---
+[Ver Manual de Utilizador](docs/manual_utilizador.pdf)
 
 ##  Especificações Técnicas
 
